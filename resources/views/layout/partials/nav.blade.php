@@ -8,10 +8,10 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="/tasks">Home</a>
+            <a class="nav-link" aria-current="page" href="{{url('tasks')}}">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="/tasks/create">Add Task</a>
+            <a class="nav-link" aria-current="page" href="{{url('tasks/create')}}">Add Task</a>
           </li>
           {{-- <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
@@ -28,8 +28,9 @@
             </ul>
           </li> --}}
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex" action="{{url('search')}}" method="POST">
+          <input type="hidden" name="_method" value="GET">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="txtsearch">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>

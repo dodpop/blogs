@@ -2,7 +2,7 @@
 @section('content')
     <h1>Add New Task</h1>
     <hr>
-    <form action="/tasks" method="POST">
+    <form action="{{url('tasks')}}" method="POST">
         {{csrf_field()}}
         <div class="form-group">
             <label for="tasktitle">Task Title</label>

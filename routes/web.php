@@ -25,3 +25,4 @@ Route::get('/', function () {
 // Route::get('/', 'PagesController@services');
 
 Route::resource('tasks','TaskController');
+Route::get('/search', 'searchController@index');
